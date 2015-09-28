@@ -38,7 +38,7 @@ def url(context, view, scheme=None, subdomain=UNSET, port=UNSET, *args, **kwargs
             subdomain = getattr(request, 'subdomain', None)
         else:
             subdomain = None
-    elif subdomain is '':
+    elif not subdomain:
         subdomain = None
 
     if port is UNSET:
